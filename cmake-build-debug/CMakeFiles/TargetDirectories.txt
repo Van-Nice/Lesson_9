@@ -1,0 +1,3 @@
+/Users/captainwilsonfiji/Documents/FRCC/CSC 1060/Lesson_9/cmake-build-debug/CMakeFiles/Lesson_9.dir
+/Users/captainwilsonfiji/Documents/FRCC/CSC 1060/Lesson_9/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/captainwilsonfiji/Documents/FRCC/CSC 1060/Lesson_9/cmake-build-debug/CMakeFiles/rebuild_cache.dir
