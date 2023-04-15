@@ -10,8 +10,10 @@ using namespace std;
 
 class DemographicInfo {
 public:
-//    DemographicInfo(string record);
-    void setAll(string firstName, string lastName, string age, string sex, string maritalStatus, string occupation, string streetAddress, string city, string state, string zipCode);
+    DemographicInfo(string record) {
+        setAll(record);
+    }
+    void setAll(string record);
     string getfirstName();
     string getlastName();
     string getsex();
@@ -23,6 +25,7 @@ public:
     string getage();
     string getzipCode();
     void printInfoShort();
+    vector<string> split_c(string str);
 private:
     string firstName,
            lastName,

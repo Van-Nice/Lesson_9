@@ -2,21 +2,9 @@
 #include <string>
 #include <iostream>
 #include <iomanip>
+#include <vector>
 
 using namespace std;
-
-void DemographicInfo::setAll(string firstName, string lastName, string age, string sex, string maritalStatus, string occupation, string streetAddress, string city, string state, string zipCode) {
-    this->firstName = firstName;
-    this->lastName = lastName;
-    this->sex = sex;
-    this->maritalStatus = maritalStatus;
-    this->occupation = occupation;
-    this->streetAddress = streetAddress;
-    this->city = city;
-    this->state = state;
-    this->age = age;
-    this->zipCode = zipCode;
-}
 
 string DemographicInfo::getfirstName() {
     return firstName;
@@ -72,6 +60,39 @@ void DemographicInfo::printInfoShort() {
     << right << setw(15) << getzipCode()
     << "\n";
 }
+
+vector<string> DemographicInfo::split_c(string str) {
+    vector<string> separatedRecord;
+    string w = "";
+    for (auto x : str)
+    {
+        if (x == ',')
+        {
+            separatedRecord.push_back(w);
+            w = "";
+        }
+        else {
+            w = w + x;
+        }
+    }
+    separatedRecord.push_back(w);
+    return separatedRecord;
+}
+
+void DemographicInfo::setAll(string record) {
+    vector<string>separatedRecord = split_c(record);
+    this->firstName = separatedRecord[0];
+    this->lastName = separatedRecord[1];
+    this->age = separatedRecord[2];
+    this->sex = separatedRecord[3];
+    this->maritalStatus = separatedRecord[4];
+    this->occupation = separatedRecord[5];
+    this->streetAddress = separatedRecord[6];
+    this->city = separatedRecord[7];
+    this->state = separatedRecord[8];
+    this->zipCode = separatedRecord[9];
+}
+
 
 
 

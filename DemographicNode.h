@@ -9,8 +9,14 @@
 
 class DemographicNode {
 public:
-    DemographicNode(DemographicInfo& object);
+    DemographicNode(string aRecord){
+
+    }
     void printNodeData();
+    DemographicNode* getPrev(DemographicNode prevNode);
+    void setPrev();
+    DemographicNode* getNext(DemographicNode nextNode);
+    void setNext();
 private:
     DemographicNode* next;
     class demographicInfoObject;
