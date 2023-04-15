@@ -3,10 +3,11 @@
 #include <iostream>
 #include <iomanip>
 #include "DemographicNode.h"
+#include "DemographicLL.h"
 
 // Print function
 void DemographicNode::printNodeData() {
-    getDemographic()->printInfoShort();
+//    demographic->printInfoShort();
 }
 
 // Getters
@@ -16,9 +17,6 @@ DemographicNode *DemographicNode::getPrev() {
 DemographicNode *DemographicNode::getNext() {
     return next;
 }
-DemographicInfo *DemographicNode::getDemographic() {
-    return demographic;
-}
 
 // Setters
 DemographicNode *DemographicNode::setPrev(DemographicNode prevNode) {
@@ -27,5 +25,11 @@ DemographicNode *DemographicNode::setPrev(DemographicNode prevNode) {
 DemographicNode *DemographicNode::setNext(DemographicNode nextNode) {
     this->next = &nextNode;
 }
+
+DemographicInfo *DemographicNode::setDemographic(string aRecord) {
+    DemographicInfo* demographicInfo(string aRecord);
+    this->demographic = demographicInfo(aRecord);
+}
+
 
 
