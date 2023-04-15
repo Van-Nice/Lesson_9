@@ -32,6 +32,8 @@ int main() {
         string record = records[i];
         DemographicInfo demographicInfo(record);
         demographicInfo.printInfoShort();
+        demInfoVector.push_back(demographicInfo);
     }
+
     return 0;
 }

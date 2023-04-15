@@ -7,9 +7,15 @@
 #define LESSON_9_DEMOGRAPHICLL_H
 
 class DemographicLL {
+public:
+    // Functions
+    DemographicLL(){
+        DemographicLL* head = nullptr;
+        DemographicLL* tail = nullptr;
+    }
 private:
-    int head;
-    int tail;
+    DemographicLL* head;
+    DemographicLL* tail;
 };
 
 

@@ -9,17 +9,17 @@
 
 class DemographicNode {
 public:
-    DemographicNode(string aRecord){
-
-    }
+    // Functions
     void printNodeData();
-    DemographicNode* getPrev(DemographicNode prevNode);
-    void setPrev();
-    DemographicNode* getNext(DemographicNode nextNode);
-    void setNext();
+    // getters and setters
+    DemographicNode* getPrev();
+    DemographicNode* setPrev(DemographicNode prevNode);
+    DemographicNode* getNext();
+    DemographicNode* setNext(DemographicNode nextNode);
+    DemographicInfo* getDemographic();
 private:
     DemographicNode* next;
-    class demographicInfoObject;
+    DemographicInfo* demographic;
     DemographicNode* prev;
 };
 
