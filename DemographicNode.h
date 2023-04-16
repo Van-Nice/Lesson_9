@@ -23,6 +23,7 @@ public:
 
     DemographicInfo* getDemographic();
     DemographicInfo* setDemographic(DemographicInfo demographicInfo);
+
 private:
     DemographicNode* prev;
     DemographicInfo* demographic;

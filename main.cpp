@@ -11,7 +11,7 @@
 using namespace std;
 
 int main() {
-    DemographicLL* demographicLl = new DemographicLL();
+    auto* demographicLl = new DemographicLL();
     demographicLl->printList();
     return 0;
 }
