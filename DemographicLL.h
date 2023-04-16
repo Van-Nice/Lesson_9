@@ -14,17 +14,15 @@ public:
         readDataFile();
     }
     void readDataFile();
-    DemographicNode* addNode(string aRecord, int nodeNumber);
-    void printList();
-    DemographicNode* setHead(DemographicNode* head);
+    void addNode(const string& aRecord, int nodeNumber);
+    static void printList();
+    void setHead(DemographicNode* head);
     DemographicNode* getHead();
     DemographicNode* setTail(DemographicNode* tail);
     DemographicNode* getTail();
-//    DemographicNode* setTailNext(DemographicNode* next);
-    void printForward(DemographicNode* head);
 private:
-    DemographicNode* head;
-    DemographicNode* tail;
-};
+    DemographicNode* head{};
+    DemographicNode* tail{};
+}; // end
 
 #endif //LESSON_9_DEMOGRAPHICLL_H

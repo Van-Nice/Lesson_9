@@ -5,15 +5,16 @@
 #ifndef LESSON_9_DEMOGRAPHICINFO_H
 #define LESSON_9_DEMOGRAPHICINFO_H
 #include <string>
+#include <utility>
 
 using namespace std;
 
 class DemographicInfo {
 public:
-    DemographicInfo(string record) {
+    explicit DemographicInfo(const string& record) {
         setAll(record);
     }
-    void setAll(string record);
+    void setAll(const string& record);
     string getfirstName();
     string getlastName();
     string getsex();
@@ -24,8 +25,8 @@ public:
     string getstate();
     string getage();
     string getzipCode();
-    DemographicInfo* printInfoShort();
-    vector<string> split_c(string str);
+    void printInfoShort();
+    static vector<string> split_c(const string& str);
 private:
     string firstName,
            lastName,
@@ -37,7 +38,7 @@ private:
            state,
            age,
            zipCode;
-};
+}; // end
 
 
 #endif //LESSON_9_DEMOGRAPHICINFO_H

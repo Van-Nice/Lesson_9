@@ -6,6 +6,23 @@
 
 using namespace std;
 
+int const zero = 0;
+int const one = 1;
+int const two = 2;
+int const three = 3;
+int const four = 4;
+int const five = 5;
+int const six = 6;
+int const seven = 7;
+int const eight = 8;
+int const nine = 9;
+int const ten = 10;
+int const thirteen = 13;
+int const fifteen = 15;
+int const nineteen = 19;
+int const twenty = 20;
+int const twenty_seven = 27;
+
 string DemographicInfo::getfirstName() {
     return firstName;
 }
@@ -46,24 +63,9 @@ string DemographicInfo::getzipCode() {
     return zipCode;
 }
 
-//void DemographicInfo::printInfoShort() {
-//    cout
-//    << right << setw(15) << getlastName()
-//    << right << setw(13)<< getfirstName()
-//    << right << setw(5) << getage()
-//    << right << setw(10) << getsex()
-//    << right << setw(10) << getmaritalStatus()
-//    << right << setw(27) << getoccupation()
-//    << right << setw(20) << getstreetAddress()
-//    << right << setw(20) << getcity()
-//    << right << setw(5) << getstate()
-//    << right << setw(15) << getzipCode()
-//    << "\n";
-//}
-
-vector<string> DemographicInfo::split_c(string str) {
+vector<string> DemographicInfo::split_c(const string& str) {
     vector<string> separatedRecord;
-    string w = "";
+    string w;
     for (auto x : str)
     {
         if (x == ',')
@@ -79,32 +81,32 @@ vector<string> DemographicInfo::split_c(string str) {
     return separatedRecord;
 }
 
-void DemographicInfo::setAll(string record) {
+void DemographicInfo::setAll(const string& record) {
     vector<string>separatedRecord = split_c(record);
-    this->firstName = separatedRecord[0];
-    this->lastName = separatedRecord[1];
-    this->age = separatedRecord[2];
-    this->sex = separatedRecord[3];
-    this->maritalStatus = separatedRecord[4];
-    this->occupation = separatedRecord[5];
-    this->streetAddress = separatedRecord[6];
-    this->city = separatedRecord[7];
-    this->state = separatedRecord[8];
-    this->zipCode = separatedRecord[9];
+    this->firstName = separatedRecord[zero];
+    this->lastName = separatedRecord[one];
+    this->age = separatedRecord[two];
+    this->sex = separatedRecord[three];
+    this->maritalStatus = separatedRecord[four];
+    this->occupation = separatedRecord[five];
+    this->streetAddress = separatedRecord[six];
+    this->city = separatedRecord[seven];
+    this->state = separatedRecord[eight];
+    this->zipCode = separatedRecord[nine];
 }
 
-DemographicInfo *DemographicInfo::printInfoShort() {
+void DemographicInfo::printInfoShort() {
     cout
-    << right << setw(15) << getlastName()
-    << right << setw(13)<< getfirstName()
-    << right << setw(5) << getage()
-    << right << setw(10) << getsex()
-    << right << setw(10) << getmaritalStatus()
-    << right << setw(27) << getoccupation()
-    << right << setw(20) << getstreetAddress()
-    << right << setw(20) << getcity()
-    << right << setw(5) << getstate()
-    << right << setw(15) << getzipCode()
+    << right << setw(fifteen) << getlastName()
+    << right << setw(thirteen)<< getfirstName()
+    << right << setw(five) << getage()
+    << right << setw(ten) << getsex()
+    << right << setw(ten) << getmaritalStatus()
+    << right << setw(twenty_seven) << getoccupation()
+    << right << setw(twenty) << getstreetAddress()
+    << right << setw(twenty) << getcity()
+    << right << setw(five) << getstate()
+    << right << setw(fifteen) << getzipCode()
     << "\n";
 }
 

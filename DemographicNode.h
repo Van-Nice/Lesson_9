@@ -10,7 +10,7 @@
 class DemographicNode {
 public:
     // Functions
-    DemographicNode(string aRecord){
+    explicit DemographicNode(const string& aRecord){
         DemographicInfo(aRecord).setAll(aRecord);
     }
     void printNodeData();
@@ -22,12 +22,12 @@ public:
     DemographicNode* setNext(DemographicNode* nextNode);
 
     DemographicInfo* getDemographic();
-    DemographicInfo* setDemographic(DemographicInfo demographicInfo);
+    DemographicInfo* setDemographic(DemographicInfo* demographicInfo);
 
 private:
-    DemographicNode* prev;
-    DemographicInfo* demographic;
-    DemographicNode* next;
+    DemographicNode* prev{};
+    DemographicInfo* demographic{};
+    DemographicNode* next{};
 };
 
 
