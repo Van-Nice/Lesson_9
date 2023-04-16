@@ -11,16 +11,21 @@ class DemographicLL {
 public:
     // Functions
     DemographicLL(){
-        DemographicLL* head = nullptr;
-        DemographicLL* tail = nullptr;
+        DemographicNode* head = nullptr;
+        DemographicNode* tail = nullptr;
         readDataFile();
     }
     void readDataFile();
-    void addNode(string aRecord);
+    DemographicNode* addNode(string aRecord);
     void printList();
+    DemographicNode* setHead(DemographicNode* head);
+    DemographicNode* getHead();
+    DemographicNode* setTail(DemographicNode* tail);
+    DemographicNode* getTail();
+
 private:
-    DemographicLL* head;
-    DemographicLL* tail;
+    DemographicNode* head;
+    DemographicNode* tail;
 };
 
 

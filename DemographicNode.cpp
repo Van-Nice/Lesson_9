@@ -7,9 +7,8 @@
 
 // Print function
 void DemographicNode::printNodeData() {
-//    demographic->printInfoShort();
+    getDemographic()->printInfoShort();
 }
-
 // Getters
 DemographicNode *DemographicNode::getPrev() {
     return prev;
@@ -17,19 +16,25 @@ DemographicNode *DemographicNode::getPrev() {
 DemographicNode *DemographicNode::getNext() {
     return next;
 }
+DemographicInfo *DemographicNode::getDemographic() {
+    return demographic;
+}
 
 // Setters
-DemographicNode *DemographicNode::setPrev(DemographicNode prevNode) {
-    this->prev = &prevNode;
+DemographicNode *DemographicNode::setPrev(DemographicNode* prevNode) {
+    DemographicNode* tmpPrev = nullptr;
+    tmpPrev = this->prev;
+    this->prev = prevNode;
+    prevNode->prev = tmpPrev;
+
 }
-DemographicNode *DemographicNode::setNext(DemographicNode nextNode) {
-    this->next = &nextNode;
+DemographicNode *DemographicNode::setNext(DemographicNode* nextNode) {
+    DemographicNode* tmpNext = nullptr;
+    tmpNext = this->next;
+    this->next = nextNode;
+    nextNode->next = tmpNext;
 }
 
-DemographicInfo *DemographicNode::setDemographic(string aRecord) {
-    DemographicInfo* demographicInfo(string aRecord);
-    this->demographic = demographicInfo(aRecord);
+DemographicInfo *DemographicNode::setDemographic(DemographicInfo demographicInfo) {
+    this->demographic = &demographicInfo;
 }
-
-
-

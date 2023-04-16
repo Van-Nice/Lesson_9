@@ -46,20 +46,20 @@ string DemographicInfo::getzipCode() {
     return zipCode;
 }
 
-void DemographicInfo::printInfoShort() {
-    cout
-    << right << setw(15) << getlastName()
-    << right << setw(13)<< getfirstName()
-    << right << setw(5) << getage()
-    << right << setw(10) << getsex()
-    << right << setw(10) << getmaritalStatus()
-    << right << setw(27) << getoccupation()
-    << right << setw(20) << getstreetAddress()
-    << right << setw(20) << getcity()
-    << right << setw(5) << getstate()
-    << right << setw(15) << getzipCode()
-    << "\n";
-}
+//void DemographicInfo::printInfoShort() {
+//    cout
+//    << right << setw(15) << getlastName()
+//    << right << setw(13)<< getfirstName()
+//    << right << setw(5) << getage()
+//    << right << setw(10) << getsex()
+//    << right << setw(10) << getmaritalStatus()
+//    << right << setw(27) << getoccupation()
+//    << right << setw(20) << getstreetAddress()
+//    << right << setw(20) << getcity()
+//    << right << setw(5) << getstate()
+//    << right << setw(15) << getzipCode()
+//    << "\n";
+//}
 
 vector<string> DemographicInfo::split_c(string str) {
     vector<string> separatedRecord;
@@ -91,6 +91,21 @@ void DemographicInfo::setAll(string record) {
     this->city = separatedRecord[7];
     this->state = separatedRecord[8];
     this->zipCode = separatedRecord[9];
+}
+
+DemographicInfo *DemographicInfo::printInfoShort() {
+    cout
+    << right << setw(15) << getlastName()
+    << right << setw(13)<< getfirstName()
+    << right << setw(5) << getage()
+    << right << setw(10) << getsex()
+    << right << setw(10) << getmaritalStatus()
+    << right << setw(27) << getoccupation()
+    << right << setw(20) << getstreetAddress()
+    << right << setw(20) << getcity()
+    << right << setw(5) << getstate()
+    << right << setw(15) << getzipCode()
+    << "\n";
 }
 
 

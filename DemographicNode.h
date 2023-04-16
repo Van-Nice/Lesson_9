@@ -16,11 +16,13 @@ public:
     void printNodeData();
     // getters and setters
     DemographicNode* getPrev();
-    DemographicNode* setPrev(DemographicNode prevNode);
+    DemographicNode* setPrev(DemographicNode* prevNode);
+
     DemographicNode* getNext();
-    DemographicNode* setNext(DemographicNode nextNode);
-    DemographicNode* getDemographic();
-    DemographicInfo* setDemographic(string aRecord);
+    DemographicNode* setNext(DemographicNode* nextNode);
+
+    DemographicInfo* getDemographic();
+    DemographicInfo* setDemographic(DemographicInfo demographicInfo);
 private:
     DemographicNode* prev;
     DemographicInfo* demographic;

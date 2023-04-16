@@ -24,7 +24,7 @@ public:
     string getstate();
     string getage();
     string getzipCode();
-    void printInfoShort();
+    DemographicInfo* printInfoShort();
     vector<string> split_c(string str);
 private:
     string firstName,
